@@ -1,0 +1,582 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mozilla Headline", sans-serif;
+    color: #1A2627;
+}
+body {
+  perspective: 1500px;
+}
+a{
+    text-decoration: none;
+    margin: 5px;
+}
+header{
+    padding-top: 5px;
+}
+li{
+    list-style-type: none;
+    display: inline-block;
+}
+.container , .con5_head , .content4{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+.con1{
+    margin: 5px auto;
+}
+.icon1 a{
+    padding: 0px 5px;
+}
+.con2{
+    font-size: 20px;
+    padding: 10px;
+
+}
+.con2 li{
+    font-size: 18px;
+}
+.logo{
+    display: flex;
+    width: 20%;
+    align-items: center;
+}
+.logo h3{
+    margin-left: 10px;
+}
+.title{
+    color: #BF1F26;
+    font-family: "Playwrite CA", cursive;
+}
+.icon2 i{
+    margin-left: 15px;
+}
+.head-hov{
+    transition: 1s;
+    position: relative;
+    padding: 0px 10px;
+}
+.head-hov::before,.box-hov::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0%;
+    height: 0%;
+    width: 2px;
+    background-color: #BF1F26;
+    transition: height 0.5s;
+}
+.head-hov:hover::before,.box-hov:hover::before {
+    height: 100%;
+}
+.head-hov::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0%;
+    height: 0%;
+    width: 2px;
+    background-color: #BF1F26;
+    transition: height 0.5s;
+}
+.head-hov:hover::after {
+    height: 100%;
+}
+.box-hov {
+    position: relative;
+    padding: 10px;
+}
+.box-hov::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 0%;
+    background-color: #BF1F26;
+    transition: height 0.5s;
+}
+.box-hov:hover::after {
+    height: 100%;
+}
+.box-hov .top-border {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #BF1F26;
+    transition: width 0.5s;
+}
+.box-hov:hover .top-border {
+    width: 100%;
+}
+.box-hov .bottom-border {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #bf1f26;
+    transition: width 0.5s;
+}
+.box-hov:hover .bottom-border {
+    width: 100%;
+}
+.h-icon{
+    transition: 0.5s;
+}
+.icon1 a{
+    padding: 0px 10px;
+}
+.icon1 a:hover .h-icon{
+    color: #BF1F26;
+    transform: rotateY(180deg);
+}
+.con2 a,.icon2 i{
+    transition: 0.5s;
+}
+.drop-menu{
+    width: 350px;
+    height: 180px;
+    background-color: white;
+    box-shadow: 1px 1px 10px gray;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 100;
+    top: 200px;
+    right: 10%;
+    padding:10px;
+    border-radius: 10px;
+    transition: 1s;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    opacity: 0;
+}
+.drop-menu ul{
+    width: 45%;
+}
+.drop-menu li{
+    display: block;
+    font-size: 16px;
+    margin: 10px 0px;
+    transition: 0.5s;
+}
+.menu-head{
+    border-bottom: 1px dotted black;
+    padding: 5px 0px;
+    color: grey;
+}
+.menu-element:hover{
+    transform: scale(1.1,1.1);
+}
+.menu-btn:hover .drop-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.red-hov:hover{
+    color: #BF1F26;
+}
+.menu-btn:hover i{
+    color: #BF1F26;
+}
+.cart{
+    position: relative;
+}
+.cart::after{
+    content: "2";
+    background-color: #BF1F26;
+    color: white;
+    padding: 3px 5px ;
+    font-size: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: 5px;
+    transition: 0.5s;
+}
+.cart:hover::after{
+    top: -20px;
+}
+.con3 ,footer{
+    width: 100%;
+    background-color: #2A3C16;
+    text-align: center;
+    padding: 10px;
+}
+.con3 span{
+    color: white;
+}
+.shop{
+    color: #FFF7B0;
+    border-bottom: 2px solid #FFF7B0 ;
+    transition: 1s;
+}
+.shop:hover{
+    letter-spacing: 3px;
+}
+/*///////////////////////////////////////////////////////////////////////////////////*/
+main{
+    background-image: url(../img/bg4.jpg);
+    background-size:cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.content1{
+   position: absolute;
+   top: 50%;
+   left: 30%;
+   transform: translate(-50%,-50%);
+   width: 40%;
+   text-align: center; 
+}
+.content1 p{
+    margin: 20px;
+}
+.btn1{
+    background-color: #2A3C16;
+    color: white;
+    font-size: 22px;
+    padding: 15px 25px;
+    transition: 1s;
+    text-decoration: none;
+}
+.btn1:hover{
+    background-color: white;
+    color: #2A3C16;
+    border: 1px solid #2A3C16;
+}
+.con4{
+    padding: 30px 0px;
+}
+.card1{
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    height: 500px;
+}
+.card1 img{
+    width: 100%;
+    overflow: clip;
+    transition: 1s;
+}
+.card1:hover img{
+    transform: scale(1.1);
+}
+.content2{
+    position: absolute;
+    background-image: linear-gradient(to top,#000000,#00000005);   
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+    transition: 1s;
+    text-align: center;
+    width: 100%;
+}
+.content2 h2 {
+    color: white;
+}
+.card1:hover .content2{
+    top: 90%;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+.arrow{
+    font-size: 35px;
+    color: #9ba1a5;
+    transition: 0.5s;
+}
+.arrow:hover{
+    color: #1A2627;
+}
+.con5{
+    width: 96%;
+}
+.active{
+    color: #BF1F26;
+    border-bottom: 4px solid #BF1F26;
+    padding-bottom: 20px;
+}
+.card2{
+    position: relative;
+    width: 20%;
+    text-align: center;
+    margin-top: 40px;
+}
+.card2 img{
+    width: 100%;
+    height: 400px;
+}
+.content3 ,.content3 h2{
+    margin: 20px auto;
+}
+.card2:hover h2{
+    color: #BF1F26;
+}
+.card-hov1{
+    position: relative;
+}
+.card-hov1::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    background-image: url(../img/ck5.jpg);
+    background-size: cover;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: 1s;
+}
+.card2:hover .card-hov1::after{
+    transform: rotateY(360deg);
+}
+.icon3{
+    background-color: white;
+    position: absolute;
+    z-index: 5;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 22px;
+    text-align: center;
+    opacity: 0;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.icon3 a{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.icon3 a:hover{
+    background-color: #BF1F26;
+}
+.icon3 a:hover .wh{
+    color: white;
+}
+.card2:hover .icon3{
+    opacity: 1;
+    top: 70%;
+}
+.dash{
+    color: #757F88;
+    text-decoration: line-through;
+    margin-left: 20px;
+}
+/*///////////////////////////////////////////////////////////////////////////*/
+.con6{
+    text-align: center;
+    justify-content: center;
+    padding: 50px 0px;
+    font-size: 20px;
+}
+.center{
+    width: 70%;
+    padding:  20px ;
+}
+.center p{
+    margin-top: 30px;
+}
+.content4{
+    justify-content: space-around;
+    width: 30%;
+    margin: 30px auto;
+}
+.content4 h3{
+    margin-bottom: -30px;
+}
+.content4 img{
+    background-color: #2A3C16;
+    padding:7px 10px 15px 10px;
+    border-radius: 50%;
+    display: inline;
+}
+.bg{
+    width: 100%;
+    background-color: #FAF9CC;
+    padding:  50px 0px;
+}
+/*///////////////////////////////////////////////////////////////////////////*/
+.c-title{
+    text-align: center;
+    font-size: 28px;
+}
+.card-hov2 {
+    position: relative;
+    overflow: hidden;
+}
+.card-hov2::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    background-image: url(../img/ck5.jpg);
+    background-size: cover;
+    top: -70%;
+    left: 0;
+    width: 100%;
+    height: 400px;
+    transition: 1s;
+    opacity: 0;
+}
+.card2:hover .card-hov2::after {
+    opacity: 1;
+    top: 0;
+}
+/*/////////////////////////////////////////////////////////////////////////*/
+.card3{
+    width: 30%;
+    height: 500px;
+}
+.card3 img{
+    width: 100%;
+    height: 300px;
+    transition: 0.5s;
+}
+.card3 p{
+    margin:10px 0px;
+}
+.card3 a{
+    margin-left: 0px;
+    font-size: 20px;
+    transition: 0.5s;
+}
+.card3 .a1{
+    color: #1A2627;
+}
+.card3:hover .a1{
+    color: #BF1F26;
+}
+.a2{
+    text-decoration: underline;
+}
+.a2:hover{
+    font-size: 22px;
+}
+.card3:hover img{
+    transform: scale(1.05,1.05);
+}
+/*///////////////////////////////////////////////////////////////////////////*/
+.card4 i{
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    left: 35%;
+}
+.i1{
+    color: grey;
+}
+.i2{
+ top: 50px;
+}
+.card4 div{
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.card4:hover i{
+    margin-top: -40px;
+}
+.con8,.con9,.con10{
+    width: 84%;
+    text-align: center;
+}
+.con8 h2{
+    margin: 10px;
+}
+.con8 i{
+    font-size: 40px;
+    margin: 10px;
+}
+/*///////////////////////////////////////////////////////////////////////////*/
+footer{
+    padding: 20px 0px;
+}
+footer p{
+    margin: 10px 0px;
+    color: white;
+}
+footer .title{
+    color: #FFF7B0;
+}
+.con9{
+    text-align: left;
+    padding: 10px 0px;
+}
+input{
+    padding: 17px;
+    width: 400px;
+    font-size: 16px;
+}
+.btn{
+    background-color: #BF1F26;
+    color: white;
+    transition: 0.5s;
+    display: inline;
+    margin-left: 20px;
+    text-align: center;
+}
+.btn a{
+    margin: 10px;
+}
+.btn:hover{
+    transform: scale(1.1,1.1);
+}
+.con9 i{
+    font-size:28px ;
+    margin-left: 10px;
+    color: white;
+    transition: 0.5s;
+}
+.con9 i:hover{
+    color: #FFF7B0;
+}
+.con10{
+    padding: 50px 0px;
+}
+.con10 .logo{
+    margin-top: -120px;
+}
+.con10 img{
+    width: 60px;
+}
+.con10 h2{
+    margin-left: 10px;
+}
+.card5{
+    width: 20%;
+    text-align: center;
+}
+.lnk{
+    display: block;
+    margin: 10px 0px;
+    color: white;
+    transition: 0.5s;
+}
+.lnk:hover{
+    text-decoration: underline;
+    transform: scale(1.1,1.1);
+}
+section{
+    margin: 150px auto;
+}
